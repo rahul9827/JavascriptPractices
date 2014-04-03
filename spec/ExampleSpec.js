@@ -16,4 +16,8 @@ describe("TryingItOut", function() {
   it("should return true if character is a vowel", function() {
     expect(tryingitout.isAVowel('e')).toBeTruthy();
   });
+
+  it("should translate phrases into rovarspraket", function() {
+    expect(tryingitout.translateIntoRovarspraket('this is fun')).toEqual('tothohisos isos fofunon');
+  });
 });

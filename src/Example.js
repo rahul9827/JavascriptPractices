@@ -25,3 +25,24 @@ TryingItOut.prototype.isAVowel = function(inputCharacter){
 	}
 	return false;
 };
+
+TryingItOut.prototype.translateIntoRovarspraket = function(originalPhrase){
+	var finalPhrase = '';
+	for (var i = 0; i < originalPhrase.length; i++) {
+    	console.log(originalPhrase.charAt(i));
+		var isAVowel = 0;
+		var vowels = ['a','e','i','o','u',' '];
+		for(var x in vowels){
+			if(originalPhrase.charAt(i) === vowels[x]){
+				isAVowel = 1;
+				break;
+			}
+		}
+		if(isAVowel === 0){
+			finalPhrase += originalPhrase.charAt(i) + 'o' + originalPhrase.charAt(i);
+		}else{
+			finalPhrase += originalPhrase.charAt(i);
+		}
+	}
+	return finalPhrase;
+};
